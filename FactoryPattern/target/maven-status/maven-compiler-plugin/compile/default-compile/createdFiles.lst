@@ -1,5 +1,6 @@
 com/oracleuniversity/data/Food.class
 com/oracleuniversity/factorypattern/Shop.class
 com/oracleuniversity/data/Drink.class
+com/oracleuniversity/data/ProductManager.class
 com/oracleuniversity/data/Product.class
 com/oracleuniversity/data/Rating.class
