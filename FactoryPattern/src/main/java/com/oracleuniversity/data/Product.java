@@ -1,19 +1,21 @@
 package com.oracleuniversity.data;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 /**
  *
  * @author lilith
  */
 public class Product {
+
     public static final BigDecimal DISCOUNT_RATE = BigDecimal.valueOf(0.1);
     private int id;
     private String name;
     private BigDecimal price;
     private Rating rating;
-    
-    public Product(){
+
+    public Product() {
         this(0, "no name", BigDecimal.ZERO);
     }
 
@@ -47,12 +49,29 @@ public class Product {
     public Rating getRating() {
         return rating;
     }
-    
+
     @Override
-    public String toString(){
-        return id+", "+name+", "+price+", "+rating.getStars();
+    public String toString() {
+        return id + ", " + name + ", " + price + ", " + rating.getStars();
     }
-    
-    
-    
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 89 * hash + this.id;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj instanceof Product) {
+            final Product other = (Product) obj;
+            return this.id == other.id && Objects.equals(this.name, other.name);
+        }
+        return false;
+    }
+
 }

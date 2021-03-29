@@ -18,11 +18,12 @@ public class Shop {
         Product p2 = new Drink(2, "Coffee", BigDecimal.valueOf(250), Rating.FOUR_STAR);
         Product p3 = new Food(LocalDate.now(), 3, "Peanut Butter", BigDecimal.valueOf(1800), Rating.FIVE_STAR);
 
-        
+        Product p4 = new Drink(4, "Choccolate", BigDecimal.valueOf(400), Rating.FOUR_STAR);
+        Product p5 = new Food(LocalDate.now(), 4, "Choccolate", BigDecimal.valueOf(400), Rating.FOUR_STAR);
+        System.out.println(p4.equals(p5));
         System.out.println(p1);
         System.out.println(p2);
         System.out.println(p3);
-                
 
     }
 
